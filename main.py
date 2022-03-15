@@ -222,11 +222,11 @@ class Main(MDApp):
             pass
 
 
-        Builder.load_file('Homescreen.kv')
-        Builder.load_file('Settingscreen.kv')
-        Builder.load_file('langto.kv')
-        Builder.load_file('profile_card.kv')
-        return Builder.load_file('mainapp.kv')
+        Builder.load_file('/screens/Homescreen.kv')
+        Builder.load_file('/screens/Settingscreen.kv')
+        Builder.load_file('/screens/langto.kv')
+        Builder.load_file('/screens/profile_card.kv')
+        return Builder.load_file('/screens/mainapp.kv')
 
 if __name__ == "__main__":
     app = Main()
