@@ -1,0 +1,25 @@
+<profile_card@MDBoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: '400dp'
+    MDToolbar:
+        title: 'Satyam Mishra'
+    ScrollView:
+        MDBoxLayout:
+            spacing: 10
+            orientation: 'vertical'
+            adaptive_height: True
+            OneLineListItem:
+                text: "I am a Developer | Programmer"
+            ThreeLineAvatarListItem:
+                text: "Mail at: "
+                secondary_text: "Contant for any ideas or bug fix."
+                tertiary_text: "satyam.work.only@gmail.com"
+                IconLeftWidget:
+                    icon: 'email'
+            MDFillRoundFlatButton:
+                pos_hint: {'center_x': 0.5,'center_y': 0.2}
+                text: "Go to mail"
+                on_release:
+                    app.goto_mail()
+                

@@ -1,0 +1,31 @@
+<Settingscreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: app.theme_cls.primary_color
+        size_hint: 1,1
+        ScrollView:
+            MDList:
+                OneLineAvatarIconListItem:
+                    text: "Mode"
+
+                    IconLeftWidget:
+                        icon: "theme-light-dark"
+                    MDSwitch:
+                        id: mode_switch
+                        pos_hint: {'center_x': .85, 'center_y': .5}
+                        on_active:
+                            app.toggle_theme()
+                OneLineAvatarIconListItem:
+                    text: "Theme Color"
+                    on_release: 
+                        root.toggle_bottomcolorsheet()
+                    IconLeftWidget:
+                        icon: "format-color-fill"
+                OneLineAvatarIconListItem:
+                    text: "About Developer"
+                    on_release:
+                        root.toggle_profile()
+                    IconLeftWidget:
+                        text_color: app.theme_cls.primary_color
+                        icon: "account"
+                    

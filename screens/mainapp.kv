@@ -1,0 +1,46 @@
+#:import rgba kivy.utils.get_color_from_hex
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+#:import toast kivymd.toast.toast
+
+MDScreen:
+    MDFloatLayout:
+        id: float_layout
+        ScreenManager:
+            id: screen_manager
+            transition: NoTransition()
+            Homescreen:
+                name: "Home"
+            Settingscreen:
+                name: "Settings"
+        NavBar:
+            size_hint: 0.85, 0.1
+            pos_hint: {'center_x': 0.5,'center_y': 0.07}
+            elevation: 15
+            md_bg_color: [1,1,1,1] if (app.theme_cls.theme_style == 'Light') else rgba('#212121')
+            radius: [12]
+            MDGridLayout:
+                cols: 4
+                spacing: 5
+                size_hint_x: .9
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                adaptive_width: True
+                MDIconButton:
+                    id: nav_icon1
+                    icon: "home"
+                    ripple_scale: 0
+                    user_font_size: "30sp"
+                    theme_text_color: "Custom"
+                    text_color: app.theme_cls.primary_color
+                    on_release:
+                        screen_manager.current = "Home"
+                        app.select_nav(self)
+                MDIconButton:
+                    id: nav_icon2
+                    icon: "cog"
+                    ripple_scale: 0
+                    user_font_size: "30sp"
+                    theme_text_color: "Custom"
+                    text_color: [0,0,0,1] if (app.theme_cls.theme_style == "Light") else [1,1,1,1] 
+                    on_release:
+                        screen_manager.current = "Settings"
+                        app.select_nav(self)            

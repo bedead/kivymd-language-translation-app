@@ -1,0 +1,66 @@
+Screen:
+    MDNavigationLayout:
+        ScreenManager:
+            id: screen_manager
+            <Startscreen>:
+            <Mainscreen>:
+            <Settingsscreen>:
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            ContentNavigationDrawer:
+
+
+<Settingsscreen@Screen>:
+    
+
+
+
+<ContentNavigationDrawer>:
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDCard:
+            
+            MDLabel:
+                text: "Langoo"
+                font_style: "H4"
+                halign: "center"
+                valign: "center"
+                theme_text_color: "Secondary"
+                
+
+
+        ScrollView:
+            MDList:
+                
+                OneLineAvatarIconListItem:
+                    text: "Translate"
+                    font_style: "Subtitle2"
+                    divider_color: [1,1,1,0]
+
+                    IconLeftWidget:
+                        icon: "translate"
+                
+                OneLineAvatarIconListItem:
+                    text: "Dictionary"
+                    font_style: "Subtitle2"
+                    divider_color: [1,1,1,0]
+                    
+
+                    IconLeftWidget:
+                        icon: ""
+
+                OneLineAvatarIconListItem:
+                    text: "Settings"
+                    font_style: "Subtitle2"
+                    divider_color: [1,1,1,0]
+                    
+
+                    IconLeftWidget:
+                        icon: "cog-outline"
+
+
+
+            
+            
